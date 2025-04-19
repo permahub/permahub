@@ -1,5 +1,5 @@
 import { SaveButton } from "@/components/ui/save-button"
-import "./bites.css";
+import "./Bites.css";
 
 export default function Bites() {
   const handleSave = async () => {
