@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Permahub Grid Rules
+globs: 
+alwaysApply: false
+---
+
+- Work in this file @GridMotionDemo.tsx and [grid-motion-demo.tsx](mdc:src/components/ui/grid-motion-demo.tsx)
+[demo.tsx.md](mdc:demo.tsx.md)
+[grid-motion-demo.tsx](mdc:src/components/ui/grid-motion-demo.tsx)
+[tailwind.config.js.md](mdc:tailwind.config.js.md)

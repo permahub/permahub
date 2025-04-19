@@ -1,0 +1,165 @@
+/* Grid Motion Styles */
+.grid-motion-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.grid-motion-section {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid-motion-wrapper {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  display: grid;
+  height: 130vh;
+  width: 120vw;
+  gap: 0.5rem;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 100%;
+  transform: rotate(-15deg);
+  transform-origin: center;
+  margin-top: -5vh;
+}
+
+.grid-motion-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  will-change: transform;
+  padding: 0.5rem 0;
+}
+
+.grid-motion-item {
+  flex: none;
+  width: 280px;
+  height: 380px;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* Add a subtle inner glow */
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+  /* Add a subtle border glow */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  /* Add a subtle edge highlight */
+  outline: 1px solid rgba(255, 255, 255, 0.05);
+  outline-offset: 1px;
+}
+
+.grid-motion-item:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: 1px;
+}
+
+.grid-motion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-motion-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Card content styles */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0.75rem;
+  z-index: -1;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 0.5rem;
+}
+
+.grid-motion-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Add a subtle gradient overlay */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.grid-motion-item:hover .grid-motion-overlay {
+  opacity: 1;
+} 

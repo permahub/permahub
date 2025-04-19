@@ -1,0 +1,62 @@
+/* --- App.css (Final) --- */
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Centered layout (adjust as needed) */
+#root {
+  width: 100%;
+  max-width: none; /* full width, remove if you want a max-width wrapper */
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.heading-container {
+  margin-top: 30px; /* same as the navbar height */
+  padding: 0 1rem;
+}
+
+.mainnet-title {
+  font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 5px 5px 3px #737373a8;
+  text-align: center; /* Ensures title remains centered */
+  transition: color 0.3s ease, text-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dark mode styles for the mainnet title */
+.dark-mode .mainnet-title {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+/* Button Hover Glow */
+button {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 10px 2px #737373a8;
+}
+
+@media (max-width: 768px) {
+  .corner-image {
+    width: 143px;
+    height: 134px;
+    z-index: 1;
+  }
+
+  .corner-image2 {
+    width: 184px;
+    height: 224px;
+    z-index: 2;
+  }
+}

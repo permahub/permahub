@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Permahub Game Section
+globs: 
+alwaysApply: false
+---
+
+- Work in this file [GridMotionDemo.tsx](mdc:src/pages/GridMotionDemo.tsx)
+[gamepage.mdc](mdc:.cursor/rules/gamepage.mdc)

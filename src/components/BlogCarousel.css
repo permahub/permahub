@@ -1,0 +1,297 @@
+/* Main container for carousel layout */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto; /* Let the container size fit the content */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center the content horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  padding: 10px; /* Reduced from 20px */
+}
+
+/* Background Video */
+.blog-background-video,
+.topic-background-video {
+  position: fixed; /* Ensures it stays in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: -10; /* Moves it far behind everything */
+  opacity: 0.8; /* Ensures visibility */
+  pointer-events: none; /* Make sure the video doesn't capture any clicks */
+}
+
+/* Topic Buttons (Centered with Flexbox) */
+.topic-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* Centers buttons */
+  width: 100%;
+  max-width: 600px; /* Increased to ensure buttons fit better */
+  margin: 10px auto; /* Reduced from 20px auto */
+  padding: 5px 0; /* Reduced from 10px 0 */
+  position: relative;
+  z-index: 20; /* Ensure buttons are above the video */
+}
+
+/* Topic Button Styling */
+.topic-button {
+  padding: 12px 24px; /* Slightly larger padding */
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 20; /* Ensure buttons are above the video */
+}
+
+.topic-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.topic-button.active {
+  background-color: #74e071;
+  color: black;
+  border: 2px solid #000000;
+}
+
+/* Dark mode styles for topic buttons */
+.dark-mode .topic-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 2px solid white;
+}
+
+.dark-mode .topic-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: 2px solid #333;
+}
+
+.dark-mode .topic-button.active {
+  background-color: #5cb85c;
+  color: white;
+  border: 2px solid #5cb85c;
+}
+
+/* Blog Preview Container (Card Layout with White Background & Shadow) */
+.blog-preview-container {
+  width: 100%;
+  max-width: 1200px; /* Increased to allow more space for cards in a row */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping of elements */
+  padding: 10px; /* Reduced from 20px */
+  text-align: center;
+  margin: 10px auto; /* Reduced from 20px auto */
+  position: relative;
+  z-index: 10; /* Ensure content is above the video */
+}
+
+/* Blog Preview Card Styling (Card with White Background & Shadow) */
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px; /* Slightly smaller to fit more in a row */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  position: relative; /* To position wallet address */
+  margin: 10px; /* Add some margin between cards */
+  cursor: pointer;
+}
+
+/* Blog Preview Hover Effect (Card grows slightly) */
+.blog-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Dark mode styles for blog preview cards */
+.dark-mode .blog-preview {
+  background-color: rgba(255, 255, 255, 0.9); /* Keep white background in dark mode */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow in dark mode */
+}
+
+.dark-mode .blog-preview h1,
+.dark-mode .blog-preview h2,
+.dark-mode .blog-preview h3,
+.dark-mode .blog-preview h4,
+.dark-mode .blog-preview h5,
+.dark-mode .blog-preview h6,
+.dark-mode .blog-preview p,
+.dark-mode .blog-preview span,
+.dark-mode .blog-preview div {
+  color: #333; /* Keep text dark in blog previews */
+}
+
+.blog-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Blog info styling */
+.blog-info {
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.blog-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #a13d27;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Read More Link Styling */
+.blog-preview a {
+  display: block;
+  margin-top: 10px;
+  color: #a13d27;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-preview a:hover {
+  text-decoration: underline;
+}
+
+/* Carousel container */
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10; /* Ensure content is above the video */
+}
+
+/* Responsive: Blog Preview Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .blog-preview-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Reduced from 20px */
+    width: 100%;
+    text-align: center;
+  }
+
+  .blog-preview {
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+}
+
+/* Buttons Styling */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px auto; /* Reduced from 20px auto */
+  width: 100%;
+  max-width: 800px; /* Limit width for better appearance */
+  position: relative;
+  z-index: 20; /* Ensure buttons are above the video */
+}
+
+/* Button Styling */
+.submit-entry-button, .send-email-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #1e3c45;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  min-width: 200px; /* Ensure buttons have a minimum width */
+  position: relative;
+  z-index: 20; /* Ensure buttons are above the video */
+}
+
+.submit-entry-button:hover, .send-email-button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark mode styles for buttons */
+.dark-mode .submit-entry-button, 
+.dark-mode .send-email-button {
+  background-color: #2c5282;
+  color: white;
+  border: 1px solid #4299e1;
+  box-shadow: 0 0 10px rgba(66, 153, 225, 0.3);
+}
+
+.dark-mode .submit-entry-button:hover, 
+.dark-mode .send-email-button:hover {
+  background-color: #3182ce;
+}
+
+/* Wallet Address Display */
+.wallet-address {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode specific styling */
+.dark-mode .wallet-address {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Corner Images */
+.corner-image,
+.corner-image2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

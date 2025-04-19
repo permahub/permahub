@@ -1,0 +1,144 @@
+/* --- Blog.css --- */
+
+/* The main container for your Blog page */
+.home-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: transparent;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background video styling */
+.blog-background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10; /* Move it far behind everything */
+  opacity: 0.8;
+  pointer-events: none; /* Make sure the video doesn't capture any clicks */
+}
+
+/* No scroll wrapper */
+.no-scroll-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  text-align: center;
+  padding-bottom: 20px; /* Reduced from 50px */
+  position: relative;
+  z-index: 10; /* Ensure content is above the video */
+}
+
+/* Heading container */
+.heading-container {
+  margin-top: 30px; /* Reduced from 50px */
+  margin-bottom: 15px; /* Reduced from 30px */
+  position: relative;
+  z-index: 20; /* Ensure title is above the video */
+}
+
+.mainnet-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20; /* Ensure title is above the video */
+}
+
+/* Carousel container */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10; /* Ensure content is above the video */
+}
+
+/* Runtime section */
+.runtime-section {
+  margin-top: 30px; /* Reduced from 60px */
+  margin-bottom: 10px; /* Reduced from 20px */
+  padding-bottom: 15px; /* Reduced from 30px */
+  text-align: center;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  position: relative;
+  z-index: 10; /* Ensure content is above the video */
+}
+
+.section-with-background-3 {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px; /* Reduced from 40px */
+}
+
+/* Background corner images */
+.corner-image3,
+.corner-image4,
+.corner-image5,
+.corner-image6 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 5; /* Ensure corner images are above the video but below content */
+}
+
+.corner-image3 {
+  top: 0;
+  right: 0;
+  background-image: url('/corner3.png');
+}
+
+.corner-image4 {
+  bottom: 0;
+  left: 0;
+  background-image: url('/corner4.png');
+}
+
+.corner-image5 {
+  top: 50%;
+  right: 0;
+  background-image: url('/corner5.png');
+}
+
+.corner-image6 {
+  bottom: 50%;
+  left: 0;
+  background-image: url('/corner6.png');
+}
+
+/* Hide corner images on smaller screens */
+@media (max-width: 886px) {
+  .corner-image3,
+  .corner-image4,
+  .corner-image5,
+  .corner-image6 {
+    display: none;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mainnet-title {
+    font-size: 2.5rem;
+  }
+  
+  .heading-container {
+    margin-top: 20px; /* Reduced from 30px */
+    margin-bottom: 10px; /* Reduced from 20px */
+  }
+} 

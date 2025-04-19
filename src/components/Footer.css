@@ -1,0 +1,43 @@
+/* --- Footer.css (Final) --- */
+
+.footer-container {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #999999;
+  z-index: 20; 
+  position: relative; /* normal flow, no need for fixed or absolute */
+  transition: background-color 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #737373a8;
+}
+
+/* Dark mode styles for footer */
+.dark-mode .footer-container {
+  background-color: #222;
+  border-top-color: #444;
+}
+
+.dark-mode .social-icons a {
+  color: white;
+}
+
+.dark-mode .social-icons a:hover {
+  color: #cccccc;
+}
