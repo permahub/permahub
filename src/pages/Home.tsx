@@ -2,8 +2,6 @@ import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import { useRef, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useHub } from '../context/HubContext';
 
 const Home = () => {

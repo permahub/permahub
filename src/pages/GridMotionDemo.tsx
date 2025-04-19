@@ -1,6 +1,4 @@
 import { GridMotion } from '../components/ui/grid-motion'
-import { useNavigate } from 'react-router-dom'
-
 // Background images for the grid
 const backgroundImages = [
   'https://arweave.net/hXNu4crmSMeSdartqgWvy4x8Di87JaGrFMKgm-hJXAE',
@@ -50,7 +48,6 @@ const destinationUrls = [
 ]
 
 export default function GridMotionDemo() {
-  const navigate = useNavigate()
 
   const handleItemClick = (index: number) => {
     const destinationUrl = destinationUrls[index]

@@ -33,7 +33,7 @@ export function GridMotion({
   const mouseXRef = useRef(window.innerWidth / 2)
 
   const totalItems = 28
-  const defaultItems = Array.from({ length: totalItems }, (_, index) => 
+  const defaultItems = Array.from({ length: totalItems }, (_) => 
     'https://source.unsplash.com/random/800x600?nature'
   )
   const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems

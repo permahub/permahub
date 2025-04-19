@@ -88,7 +88,7 @@ export const SparklesCore = React.memo(
           context.clearRect(0, 0, rect.width, rect.height);
 
           // Update and draw particles
-          particles.forEach((particle, i) => {
+          particles.forEach((particle) => {
             // Update position based on speed and deltaTime
             particle.x += particle.speedX * (deltaTime * 0.01);
             particle.y += particle.speedY * (deltaTime * 0.01);
