@@ -1,0 +1,29 @@
+.hero-buttontx {
+margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px #737373a8;
+    cursor: pointer;
+    transition: all 0.3s
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'Press Start 2P', monospace;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.841);
+}

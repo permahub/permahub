@@ -1,0 +1,73 @@
+.blog-post-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Centering the blog header image */
+.blog-header-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto; /* Centers image and adds bottom spacing */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Updated Title Color */
+.blog-post-container h1 {
+    color: black; /* Changed from green to black */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center; /* Center the title */
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+    text-align: center; /* Center metadata */
+}
+
+.blog-content h2,
+.blog-content h3 {
+    color: black;
+    margin-top: 20px;
+}
+
+.blog-content p {
+    line-height: 1.6;
+    font-size: 18px;
+    color: black;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin-left: 20px; /* Indents lists properly */
+    padding-left: 20px;
+}
+
+.blog-content a {
+    color: #007bff; /* Change to blue for better visibility */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-content a:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
