@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 import { useRef, useEffect } from "react";
 import BlogCarousel from "../components/BlogCarousel";
 
 const Blog = () => {
-  const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 

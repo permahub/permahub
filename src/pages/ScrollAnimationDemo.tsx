@@ -1,4 +1,3 @@
-import React from "react";
 import "./BlogPost.css"; // Reusing blog post styles for consistent formatting
 
 const ScrollAnimationDemo = () => {
