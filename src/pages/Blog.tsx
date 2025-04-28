@@ -16,6 +16,7 @@ const Blog = () => {
   }, []);
 
   return (
+    <div className="bites-background flex flex-col items-center justify-center p-4 min-h-screen">
     <div className="home-container relative" ref={containerRef}>
       {/* Background Video */}
       <video
@@ -48,6 +49,7 @@ const Blog = () => {
       <div className="runtime-section section-with-background-3">
         <h2></h2>
       </div>
+     </div>
     </div>
   );
 };

@@ -27,3 +27,34 @@ margin-top: 20px;
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.841);
 }
+
+.bites-background {
+  background-image: url('/permabites.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bites-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bites-background > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bites-content {
+  margin-top: 60px;
+}
