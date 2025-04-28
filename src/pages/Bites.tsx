@@ -19,7 +19,7 @@ export default function Bites() {
         </div>
         <SaveButton 
           text={{
-            idle: "Register",
+            idle: "Apply to Host",
             saving: "Processing...",
             saved: "Welcome Aboard! 🎉"
           }}
