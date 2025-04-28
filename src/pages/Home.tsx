@@ -27,7 +27,7 @@ const Home = () => {
 
   const handleEnterHub = () => {
     enterHub();
-    navigate('/games');
+    navigate('/bites');
   };
 
   return (

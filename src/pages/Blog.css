@@ -142,3 +142,28 @@
     margin-bottom: 10px; /* Reduced from 20px */
   }
 } 
+
+.bites-background {
+  background-image: url('/permabites.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  /* Optional: add a dark overlay for better button contrast */
+}
+
+.bites-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* Adjust opacity for desired darkness */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bites-background > * {
+  position: relative;
+  z-index: 1;
+}

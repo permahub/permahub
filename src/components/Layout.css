@@ -54,7 +54,7 @@
 
 /* Content area – occupies space between header and footer and scrolls if necessary */
 .layout-content {
-  margin-top: 350px;
+  margin-top: 50px;
   margin-bottom: 50px;
   height: calc(100vh - 95px);
   overflow-y: auto;

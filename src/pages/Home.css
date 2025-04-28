@@ -54,7 +54,7 @@
 
 /* Hero section */
 .hero-section {
-  padding-top: 150px;
+  padding-top: 50px;
   text-align: center;
   font-family: Arial, sans-serif;
   position: relative;
@@ -67,7 +67,7 @@
 /* On smaller screens, reduce top padding */
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 100px; 
+    padding-top: 30px; 
   }
 }
 
