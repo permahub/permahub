@@ -32,6 +32,13 @@ const blogTopics: Record<string, { video: string; blogs: BlogPost[] }> = {
     video: permaHub,
     blogs: [
       { 
+        title: "Build the Future of Computing with Permabites", 
+        excerpt: "The most revolutionary technologies are built through genuine human connections. Today, we're excited to introduce Permabites – a grassroots initiative designed to foster authentic, face-to-face community building for the AO ecosystem around the world.", 
+        image: "/permabites.png", 
+        link: "/blog/permabites",
+        walletAddress: "jt19WluLXKr9lcostp_XNmXRmpdxM4VwmXbmyDLoyNM"
+      },
+      { 
         title: "Permaweb Use Cases", 
         excerpt: "Exploring real-world applications built on Arweave.", 
         image: permawebImage, 
@@ -135,16 +142,14 @@ const BlogCarousel = () => {
           {blogTopics[selectedTopic].blogs.map((blog, index) => (
             <div 
               key={index} 
-              className="blog-preview"
+              className={`blog-preview${blog.title === 'Build the Future of Computing with Permabites' ? ' permabites-green-bg' : ''}`}
               onClick={() => blog.link && navigate(blog.link, { state: { image: blog.image, title: blog.title } })}
             >
               <img src={blog.image} alt={blog.title} className="blog-image" />
-              
               {/* Wallet Address Display */}
               <div className="wallet-address">
                 {formatWalletAddress(blog.walletAddress)}
               </div>
-
               <div className="blog-info">
                 <h3>{blog.title}</h3>
                 <p>{blog.excerpt}</p>

@@ -12,7 +12,7 @@ export default function Bites() {
       <Helmet>
         <title>Permabites | PermaHub</title>
         <meta name="description" content="Get a taste of the permaweb — pizza, prints, and early access. Apply to host a Permabite!" />
-        <meta property="og:title" content="Permabites | PermaHub" />
+        <meta property="og:title" content="PermaBites | PermaHub" />
         <meta property="og:description" content="Get a taste of the permaweb — pizza, prints, and early access. Apply to host a Permabite!" />
         <meta property="og:image" content="https://permahub.vercel.app/permabites.png" />
         <meta property="og:url" content="https://permahub.vercel.app/bites" />
