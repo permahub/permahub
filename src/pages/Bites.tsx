@@ -14,7 +14,7 @@ export default function Bites() {
             PERMA-BITES
           </h1>
           <p className="hero-subtext ext-gray-400 max-w-md mx-auto">
-            Get a taste of the permaweb — pizza, prints, and early access. More details on Permabites coming soon 👀
+            Get a taste of the permaweb — pizza, prints, and early access.
           </p>
         </div>
         <SaveButton 
