@@ -23,9 +23,9 @@ margin-top: 20px;
 }
 
 .hero-subtext {
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.841);
+    font-size: 1.4rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .bites-background {
