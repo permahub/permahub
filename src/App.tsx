@@ -10,6 +10,7 @@ import TrustInBlockchain from './pages/TrustInBlockchain';
 import More from './pages/More';
 import GridMotionDemo from './pages/GridMotionDemo';
 import Bites from './pages/Bites';
+import PermabitesBlogPost from './pages/PermabitesBlogPost';
 import "./index.css"; /* Global Styles */
 import "./App.css";   /* Additional App-wide styles */
 import { ThemeProvider } from './providers/ThemeProvider';
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/blog/afmedia-resource-guide" element={<AFMediaResourceGuide />} />
                 <Route path="/blog/pie-day-article" element={<PiDayArticle />} />
                 <Route path="/blog/trust-in-blockchain" element={<TrustInBlockchain />} />
+                <Route path="/blog/permabites" element={<PermabitesBlogPost />} />
                 
                 {/* More Page */}
                 <Route path="/more" element={<More />} />
