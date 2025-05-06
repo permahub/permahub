@@ -74,6 +74,13 @@ export function GridMotion({
     }
   }, [])
 
+  const handleClick = (index: number) => {
+    console.log('Grid item clicked:', index) // Debug log
+    if (onItemClick) {
+      onItemClick(index)
+    }
+  }
+
   return (
     <div className={cn("grid-motion-container", className)} ref={gridRef}>
       <section
@@ -91,18 +98,20 @@ export function GridMotion({
             >
               {[...Array(7)].map((_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex]
+                const index = rowIndex * 7 + itemIndex
                 return (
                   <div 
                     key={itemIndex} 
                     className="grid-motion-item"
-                    onClick={() => onItemClick?.(rowIndex * 7 + itemIndex)}
+                    onClick={() => handleClick(index)}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') {
-                        onItemClick?.(rowIndex * 7 + itemIndex);
+                        handleClick(index)
                       }
                     }}
+                    style={{ cursor: 'pointer' }}
                   >
                     {typeof content === 'string' && content.startsWith('http') ? (
                       <>

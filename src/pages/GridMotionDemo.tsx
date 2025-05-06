@@ -48,18 +48,37 @@ const destinationUrls = [
 ]
 
 export default function GridMotionDemo() {
-
   const handleItemClick = (index: number) => {
+    console.log('Handling click for index:', index) // Debug log
     const destinationUrl = destinationUrls[index]
+    console.log('Destination URL:', destinationUrl) // Debug log
+    
     if (destinationUrl) {
-      window.open(destinationUrl, '_blank')
+      try {
+        // Try using window.location first
+        window.location.href = destinationUrl
+      } catch (error) {
+        console.error('Error with window.location:', error)
+        try {
+          // Fallback to creating a link
+          const link = document.createElement('a')
+          link.href = destinationUrl
+          link.target = '_blank'
+          link.rel = 'noopener noreferrer'
+          document.body.appendChild(link)
+          link.click()
+          document.body.removeChild(link)
+        } catch (fallbackError) {
+          console.error('Error with link creation:', fallbackError)
+        }
+      }
     }
   }
 
   return (
     <div className="min-h-screen bg-black/95 relative">
-      {/* Video Background */}
-      <div className="video-background-container absolute inset-0 w-full h-full overflow-hidden z-0">
+      {/* Video Background - Moved to the back with lower z-index */}
+      <div className="video-background-container absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: -1 }}>
         {/* <video 
           className="video-background w-full h-full object-cover"
           autoPlay 
@@ -72,11 +91,12 @@ export default function GridMotionDemo() {
         </video> */}
       </div>
       
-      <div className="h-screen w-full relative z-10">
+      {/* Grid Container - Now on top with higher z-index */}
+      <div className="h-screen w-full relative" style={{ zIndex: 1 }}>
         <GridMotion 
           items={backgroundImages}
           gradientColor="rgba(255,255,255,0.02)"
-          className="relative z-10 backdrop-blur-[0.5px]"
+          className="relative backdrop-blur-[0.5px]"
           onItemClick={handleItemClick}
         />
       </div>

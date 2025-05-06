@@ -81,7 +81,7 @@ const Home = () => {
           </span>
         </h1>
         <p className="hero-text">Build | Play | Learn on Arweave</p>
-        <div className="flex flex-row gap-3 justify-center mt-8">
+        <div className="flex flex-row gap-3 justify-center mt-20">
           <button 
             className="explore-button gap-4 flex items-center"
             onClick={handleEnterHub}

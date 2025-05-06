@@ -49,3 +49,6 @@ coverage
 
 # Vercel
 .vercel 
+
+# Wallet
+wallet.json 

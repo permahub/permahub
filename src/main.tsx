@@ -1,39 +1,36 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-
-// Function to detect DevTools and log ASCII "ELTIO"
-const detectDevTools = () => {
-  const devtools = { open: false };
-  const threshold = 160; // Common width when DevTools is open
-
-  setInterval(() => {
-    const width = window.outerWidth - window.innerWidth > threshold;
-    const height = window.outerHeight - window.innerHeight > threshold;
-
-    if ((width || height) && !devtools.open) {
-      devtools.open = true;
-      console.log(`%c
-        
-  _ \ __|  _ \   \  |    \    |  |  |  | _ ) 
-  __/ _|     /  |\/ |   _ \   __ |  |  | _ \ 
- _|  ___| _|_\ _|  _| _/  _\ _| _| \__/ ___/ 
-                                                                                                                                                                                                                                  
-    Permasite by ELTIO                                  
-`, "color:rgb(31, 85, 21); font-weight: bold; font-size: 16px;");
-    } else if (!width && !height) {
-      devtools.open = false;
-    }
-  }, 1000);
-};
-
-// Call the function to start monitoring DevTools
-detectDevTools();
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { ArweaveWalletKit } from "@arweave-wallet-kit/react";
+import WanderStrategy from "@arweave-wallet-kit/wander-strategy";
+import OthentStrategy from "@arweave-wallet-kit/othent-strategy";
+import BrowserWalletStrategy from "@arweave-wallet-kit/browser-wallet-strategy";
+import WebWalletStrategy from "@arweave-wallet-kit/webwallet-strategy";
+import AoSyncStrategy from "@vela-ventures/aosync-strategy";
 
 // Render the React app
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ArweaveWalletKit
+      config={{
+        permissions: [
+          "ACCESS_ADDRESS",
+          "ACCESS_PUBLIC_KEY",
+          "SIGN_TRANSACTION",
+          "DISPATCH",
+        ],
+        ensurePermissions: true,
+        strategies: [
+          new WanderStrategy(),
+          new OthentStrategy(),
+          new BrowserWalletStrategy(),
+          new WebWalletStrategy(),
+          new AoSyncStrategy(),
+        ],
+      }}
+    >
+      <App />
+    </ArweaveWalletKit>
+  </React.StrictMode>
+);
