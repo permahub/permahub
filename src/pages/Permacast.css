@@ -1,0 +1,569 @@
+.permacast-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Series List Page */
+.permacast-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.permacast-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.permacast-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.series-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.series-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.series-info {
+  padding: 1.5rem;
+}
+
+.series-info h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.series-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Series Detail Page */
+.series-header {
+  margin-bottom: 3rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.series-header .series-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.series-header .series-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.series-header h1 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.episode-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.episode-card h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.episode-card p {
+  margin: 0.5rem 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.episode-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.episode-card a:hover {
+  text-decoration: underline;
+}
+
+.episode-card .rhap_container {
+  min-height: 48px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0;
+  box-shadow: none;
+  background: transparent;
+}
+.episode-card .rhap_controls-section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.episode-card .rhap_main-controls-button {
+  margin: 0 8px;
+}
+.episode-card .rhap_volume-controls {
+  margin-left: 8px;
+}
+.episode-card .rhap_progress-section {
+  display: none !important;
+}
+.episode-card .rhap_time {
+  font-size: 0.95rem;
+}
+.episode-card .rhap_download-progress, .episode-card .rhap_progress-indicator {
+  display: none !important;
+}
+
+/* Loading State */
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loading-state h2 {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff3f3;
+  border-radius: 12px;
+  border: 1px solid #ffcdd2;
+}
+
+.error-state h2 {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+}
+
+.error-state p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.error-state button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-state button:hover {
+  background: #0052a3;
+}
+
+/* No Episodes State */
+.no-episodes {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.no-episodes h2 {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.no-episodes p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* Dark Mode Support */
+.dark-mode .permacast-header h1,
+.dark-mode .series-header h1,
+.dark-mode .mainnet-title {
+  color: #ffffff;
+}
+
+.dark-mode .permacast-header p,
+.dark-mode .series-header p {
+  color: #e0e0e0;
+}
+
+.dark-mode .series-card,
+.dark-mode .episode-card {
+  background: #1a1a1a;
+}
+
+.dark-mode .series-info h2,
+.dark-mode .episode-card h2 {
+  color: #ffffff;
+}
+
+.dark-mode .series-info p,
+.dark-mode .episode-card p {
+  color: #e0e0e0;
+}
+
+.dark-mode .error-state {
+  background: #2a1a1a;
+  border-color: #4a2a2a;
+}
+
+.dark-mode .error-state h2 {
+  color: #ff6b6b;
+}
+
+.dark-mode .no-episodes {
+  background: #2a2a2a;
+}
+
+.dark-mode .no-episodes h2,
+.dark-mode .no-episodes p {
+  color: #ccc;
+}
+
+.dark-mode .back-button {
+  color: #4dabf7;
+}
+
+.dark-mode .episode-card a {
+  color: #4dabf7;
+}
+
+.mainnet-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .mainnet-title {
+    font-size: 2.5rem;
+  }
+}
+
+.episodes-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.episode-card-grid {
+  background: #fff;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  min-width: 0;
+}
+
+.dark-mode .episode-card-grid {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.episode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.episode-badge {
+  background: #4dabf7;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 0.3em 1em;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 4px rgba(77,171,247,0.12);
+  margin-right: 0.7rem;
+  display: flex;
+  align-items: center;
+  height: 2.2rem;
+}
+
+.episode-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  flex: 1;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode .episode-title {
+  color: #ffffff;
+}
+
+.episode-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.episode-pill {
+  background: #f0f4f8;
+  color: #4dabf7;
+  border-radius: 999px;
+  padding: 0.2em 0.9em;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.dark-mode .episode-pill {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.episode-description {
+  margin: 0.5rem 0 0.5rem 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-line;
+  max-width: 100%;
+}
+
+.dark-mode .episode-description {
+  color: #e0e0e0;
+}
+
+.episode-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 6px;
+  padding: 0.2em 0.8em;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.15s;
+  z-index: 2;
+}
+
+.episode-link:hover {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+.episode-card-grid .rhap_container {
+  min-height: 48px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.episode-card-grid .rhap_controls-section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.episode-card-grid .rhap_main-controls-button {
+  margin: 0 16px;
+  font-size: 2.2rem;
+  color: #4dabf7;
+}
+
+.episode-card-grid .rhap_volume-controls {
+  margin-left: 8px;
+}
+
+.episode-card-grid .rhap_progress-section {
+  display: none !important;
+}
+
+.episode-card-grid .rhap_time {
+  font-size: 0.95rem;
+}
+
+.episode-card-grid .rhap_download-progress, .episode-card-grid .rhap_progress-indicator {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .episodes-list-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .episode-card-grid {
+    padding: 1rem 0.7rem 2.2rem 0.7rem;
+  }
+  .episode-title {
+    font-size: 1rem;
+  }
+  .episode-link {
+    bottom: 0.7rem;
+    right: 0.5rem;
+    font-size: 0.92rem;
+    padding: 0.15em 0.6em;
+  }
+}
+
+.series-card-grid {
+  background: #fff;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  min-width: 0;
+  transition: box-shadow 0.15s;
+}
+.series-card-grid:hover {
+  box-shadow: 0 4px 16px rgba(77,171,247,0.18);
+}
+.dark-mode .series-card-grid {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+.series-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+}
+.series-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 6px;
+  padding: 0.2em 0.8em;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.15s;
+  z-index: 2;
+}
+.series-link:hover {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+@media (max-width: 700px) {
+  .series-card-grid {
+    padding: 1rem 0.7rem 2.2rem 0.7rem;
+  }
+  .series-link {
+    bottom: 0.7rem;
+    right: 0.5rem;
+    font-size: 0.92rem;
+    padding: 0.15em 0.6em;
+  }
+}
+
+/* --- DARK MODE FIXES --- */
+.dark-mode .series-header,
+.dark-mode .series-header *,
+.dark-mode .series-title,
+.dark-mode .series-info,
+.dark-mode .series-info *,
+.dark-mode .episode-title,
+.dark-mode .episode-card-grid,
+.dark-mode .episode-card-grid *,
+.dark-mode .mainnet-title {
+  color: #fff !important;
+}
+
+.dark-mode .series-header p,
+.dark-mode .series-info p,
+.dark-mode .episode-description,
+.dark-mode .episode-meta,
+.dark-mode .episode-pill {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .back-button {
+  background: #222 !important;
+  color: #fff !important;
+  border: 1px solid #444 !important;
+}
+
+.dark-mode .back-button:hover {
+  background: #333 !important;
+  color: #4dabf7 !important;
+}
+
+/* Ensure links are visible */
+.dark-mode a,
+.dark-mode .series-link,
+.dark-mode .episode-link {
+  color: #4dabf7 !important;
+  text-decoration: underline;
+}
+
+.dark-mode .series-link,
+.dark-mode .episode-link {
+  background: #222 !important;
+} 

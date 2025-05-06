@@ -115,7 +115,7 @@
 .dark-mode p:not(.blog-preview *):not(.hero-text):not(.more-hero-text):not(.more-fair-launch-text), 
 .dark-mode span:not(.blog-preview *):not(.hero-section *):not(.more-hero-section *), 
 .dark-mode div:not(.blog-preview):not(.blog-preview *):not(.hero-section):not(.hero-section *):not(.more-hero-section):not(.more-hero-section *) {
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Apply dark mode to links except those in specific components */

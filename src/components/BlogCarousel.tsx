@@ -161,7 +161,7 @@ const BlogCarousel = () => {
       </div>
 
       <div className="buttons-container">
-        <a href="https://permatell.arweave.net" target="_blank" rel="noopener noreferrer">
+        <a href="https://permatell.arweave.net/#/" target="_blank" rel="noopener noreferrer">
           <button className="submit-entry-button">PermaTell Your Entry for PermaHub</button>
         </a>
         <a href="https://biuq26pcmjwrr22godqmwehtd5mof25encuxi74oi3qh3rwi46wa.arweave.net/CikNeeJibRjrRnDgyxDzH1ji66RoqXR_jkbgfcbI56w/#/">

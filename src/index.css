@@ -81,3 +81,21 @@ h2 {
   background: black;
   color: white;
 }
+
+/* Wallet Connect Button Dark Mode Fix */
+.dark-mode .wallet-connect-btn {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1.5px solid #444 !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.dark-mode .wallet-connect-btn:hover {
+  background: #f3f3f3 !important;
+}
+
+/* Force black text utility */
+.force-black-text {
+  color: #111 !important;
+}

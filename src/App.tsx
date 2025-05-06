@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { HubProvider } from './context/HubContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -7,10 +7,13 @@ import PermawebUseCases from './pages/PermawebUseCases';
 import AFMediaResourceGuide from './pages/AFMediaResourceGuide';
 import PiDayArticle from './pages/PiDayArticle';
 import TrustInBlockchain from './pages/TrustInBlockchain';
-import More from './pages/More';
 import GridMotionDemo from './pages/GridMotionDemo';
 import Bites from './pages/Bites';
+import PermabiteDetail from './pages/PermabiteDetail';
 import PermabitesBlogPost from './pages/PermabitesBlogPost';
+import { Permabites } from './components/Permabites';
+import Permacast from './pages/Permacast';
+import PermacastSeries from './pages/PermacastSeries';
 import "./index.css"; /* Global Styles */
 import "./App.css";   /* Additional App-wide styles */
 import { ThemeProvider } from './providers/ThemeProvider';
@@ -35,14 +38,19 @@ function App() {
                 <Route path="/blog/trust-in-blockchain" element={<TrustInBlockchain />} />
                 <Route path="/blog/permabites" element={<PermabitesBlogPost />} />
                 
-                {/* More Page */}
-                <Route path="/more" element={<More />} />
-                
                 {/* Demo Pages */}
                 <Route path="/games" element={<GridMotionDemo />} />
                 
-                {/* Bites Page */}
+                {/* Bites Pages */}
                 <Route path="/bites" element={<Bites />} />
+                <Route path="/bites/:id" element={<PermabiteDetail />} />
+
+                {/* Community Permabites */}
+                <Route path="/community" element={<Permabites />} />
+
+                {/* Permacast Pages */}
+                <Route path="/permacast" element={<Permacast />} />
+                <Route path="/permacast/:seriesId" element={<PermacastSeries />} />
               </Routes>
             </Layout>
           </Router>
