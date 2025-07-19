@@ -33,7 +33,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: 1;
@@ -44,12 +44,27 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  min-width: 100%;
-  min-height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+  }
 }
 
 /* Hero section */
@@ -168,7 +183,7 @@ h2, h3 {
 
 p {
   font-size: 1.3rem;
-  max-width: 800px;
+  max-width: 1062px;
   margin: 0 auto;
   font-weight: bold;
 }
@@ -217,14 +232,7 @@ p {
 }
 
 /* Hide corner images on smaller screens */
-@media (max-width: 886px) {
-  .corner-image3,
-  .corner-image4,
-  .corner-image5,
-  .corner-image6 {
-    display: none;
-  }
-}
+
 
 .prize-distribution {
   font-size: 1.6rem;
@@ -407,38 +415,4 @@ p {
 }
 
 /* Background corner images */
-.corner-image3,
-.corner-image4,
-.corner-image5,
-.corner-image6 {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.1;
-}
 
-.corner-image3 {
-  top: 0;
-  right: 0;
-  background-image: url('/corner3.png');
-}
-
-.corner-image4 {
-  bottom: 0;
-  left: 0;
-  background-image: url('/corner4.png');
-}
-
-.corner-image5 {
-  top: 50%;
-  right: 0;
-  background-image: url('/corner5.png');
-}
-
-.corner-image6 {
-  bottom: 50%;
-  left: 0;
-  background-image: url('/corner6.png');
-}

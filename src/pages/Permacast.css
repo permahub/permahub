@@ -1,22 +1,22 @@
-.permacast-page {
+.cast-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
 /* Series List Page */
-.permacast-header {
+.cast-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.permacast-header h1 {
+.cast-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.permacast-header p {
+.cast-header p {
   font-size: 1.2rem;
   color: #666;
 }
@@ -225,13 +225,13 @@
 }
 
 /* Dark Mode Support */
-.dark-mode .permacast-header h1,
+.dark-mode .cast-header h1,
 .dark-mode .series-header h1,
 .dark-mode .mainnet-title {
   color: #ffffff;
 }
 
-.dark-mode .permacast-header p,
+.dark-mode .cast-header p,
 .dark-mode .series-header p {
   color: #e0e0e0;
 }
@@ -559,7 +559,7 @@
 .dark-mode a,
 .dark-mode .series-link,
 .dark-mode .episode-link {
-  color: #4dabf7 !important;
+  color: #ffffff !important;
   text-decoration: underline;
 }
 

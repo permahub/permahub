@@ -1,0 +1,44 @@
+/* PromptInput Bubble Styles */
+.prompt-input-bubble {
+  background: #fff !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.09) !important;
+  border: 1.5px solid #e5e7eb !important;
+  padding: 1.5rem !important;
+  max-width: 420px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.prompt-input-bubble textarea {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #222 !important;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem !important;
+  min-height: 44px;
+  flex: 1 1 auto;
+  resize: none;
+}
+
+.prompt-input-bubble button {
+  margin-left: 0.5rem;
+  background: #18181b !important;
+  color: #fff !important;
+  border-radius: 9999px !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+
+.prompt-input-bubble button:hover {
+  background: #333 !important;
+} 

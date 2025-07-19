@@ -1,0 +1,10 @@
+/* Minimal original hackathon styles - no conflicts with other pages */
+
+.hackathon-page {
+  /* Base page styles if needed */
+}
+
+/* Keep only essential non-conflicting styles here */
+.background-video {
+  display: none !important;
+}

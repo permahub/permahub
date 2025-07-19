@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ConnectButton } from '@arweave-wallet-kit/react';
+import { WalletManager } from './WalletManager';
 import './Navbar.css';
 
 interface NavbarProps {
@@ -31,24 +31,16 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
           <li><Link to="/blog" className="navbar-link">BLOG</Link></li>
           <li><Link to="/games" className="navbar-link">GAMES</Link></li>
           <li><Link to="/bites" className="navbar-link">BITES</Link></li>
-          <li><Link to="/permacast" className="navbar-link">PERMACAST</Link></li>
-          <li>
-            <a
-              href="https://ao.arweave.net/#/delegate"
-              className="navbar-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DELEGATE
-            </a>
-          </li>
+          <li><Link to="/permacast" className="navbar-link">CAST</Link></li>
+          <li><Link to="/hackathon" className="navbar-link">HACKATHON</Link></li>
+          <li><Link to="/berlin" className="navbar-link">BERLIN</Link></li>
         </ul>
       </div>
 
       {/* Right: Wallet Connect Button and Hamburger */}
       <div className="navbar-right">
         <div className="wallet-connect-desktop">
-          <ConnectButton className="wallet-connect-button" />
+          <WalletManager />
         </div>
         <button
           className="hamburger-menu"
@@ -73,18 +65,9 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
           <li><Link to="/blog" className="navbar-link" onClick={() => setMenuOpen(false)}>BLOG</Link></li>
           <li><Link to="/games" className="navbar-link" onClick={() => setMenuOpen(false)}>GAMES</Link></li>
           <li><Link to="/bites" className="navbar-link" onClick={() => setMenuOpen(false)}>BITES</Link></li>
-          <li><Link to="/permacast" className="navbar-link" onClick={() => setMenuOpen(false)}>PERMACAST</Link></li>
-          <li>
-            <a
-              href="https://ao.arweave.net/#/delegate"
-              className="navbar-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
-            >
-              DELEGATE
-            </a>
-          </li>
+          <li><Link to="/permacast" className="navbar-link" onClick={() => setMenuOpen(false)}>CAST</Link></li>
+          <li><Link to="/hackathon" className="navbar-link" onClick={() => setMenuOpen(false)}>HACKATHON</Link></li>
+          <li><Link to="/berlin" className="navbar-link" onClick={() => setMenuOpen(false)}>BERLIN</Link></li>
         </ul>
       </div>
     </nav>

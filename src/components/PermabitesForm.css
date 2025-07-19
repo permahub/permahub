@@ -92,3 +92,54 @@ label[for="content"] {
   color: #18181b;
   font-weight: 600;
 } 
+
+.permabite-input-bubble {
+  background: #fff !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.09) !important;
+  border: 1.5px solid #e5e7eb !important;
+  padding: 1.5rem !important;
+  max-width: 420px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.permabite-input-bubble textarea {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #222 !important;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem !important;
+  min-height: 44px;
+  flex: 1 1 auto;
+  resize: none;
+}
+
+.permabite-input-bubble--small {
+  background: #fff !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.09) !important;
+  border: 1.5px solid #e5e7eb !important;
+  padding: 0.5rem 1.25rem !important;
+  max-width: 420px;
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.permabite-input-bubble--small input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #222 !important;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem !important;
+  height: 2.2rem;
+  flex: 1 1 auto;
+} 

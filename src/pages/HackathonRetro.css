@@ -1,0 +1,915 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+  font-family: 'VT323';
+  src: url('/fonts/VT323-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Hackathon page wrapper - completely separate styling */
+.hackathon-page-wrapper {
+  background: #E60012 !important;
+  color: #fff !important;
+  font-family: 'VT323', monospace !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  max-width: none;
+}
+
+.hackathon-page-wrapper .hackathon-container {
+  background: #E60012 !important;
+  color: #fff !important;
+  font-family: 'VT323', monospace !important;
+  padding-top: 80px;
+  max-width: none;
+  overflow-x: hidden;
+  height: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply VT323 font only to hackathon page content */
+.hackathon-page-wrapper .hackathon-container,
+.hackathon-page-wrapper .hackathon-container * {
+  font-family: 'VT323', monospace !important;
+}
+
+/* Hide the main site navigation ONLY on hackathon page */
+.hackathon-page nav:not(.retro-nav),
+.hackathon-page-wrapper nav:not(.retro-nav) {
+  display: none !important;
+}
+
+/* Retro navigation styling - ONLY for hackathon page */
+.hackathon-page-wrapper .retro-nav {
+  display: flex !important;
+  visibility: visible !important;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #E60012;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.hackathon-page-wrapper .retro-nav .nav-left {
+  display: flex;
+  gap: 34.97px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hackathon-page-wrapper {
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.ao-log {
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.hackathon-page-wrapper .retro-nav-item {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 10000;
+  position: relative;
+}
+
+.hackathon-page-wrapper .retro-nav-item:hover {
+  color: #FFE4E1;
+  text-decoration: none;
+}
+
+/* Floating elements - ONLY for hackathon page */
+.hackathon-page-wrapper .floating-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hackathon-page-wrapper .ufo-1 {
+  top: 80px;
+  left: 50px;
+  width: 80px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .ufo-2 {
+  top: 200px;
+  right: 80px;
+  width: 70px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .ufo-3 {
+  top: 400px;
+  left: 100px;
+  width: 65px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .ufo-4 {
+  top: 600px;
+  right: 60px;
+  width: 75px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-1 {
+  top: 300px;
+  left: 200px;
+  width: 30px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-2 {
+  top: 500px;
+  right: 150px;
+  width: 25px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-3 {
+  top: 700px;
+  left: 80px;
+  width: 28px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-4 {
+  top: 150px;
+  right: 200px;
+  width: 32px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-5 {
+  top: 450px;
+  left: 300px;
+  width: 30px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .runner-6 {
+  top: 650px;
+  right: 120px;
+  width: 26px;
+  height: auto;
+}
+
+/* Hero section */
+.hackathon-page-wrapper .retro-hero-box {
+  background: #E60012;
+  border: 6px solid #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  margin: 2rem 0;
+  outline: 4px solid #000;
+  outline-offset: 4px;
+}
+
+.hackathon-page-wrapper .border-alien {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.hackathon-page-wrapper .alien-top-left {
+  top: -20px;
+  left: -20px;
+}
+
+.hackathon-page-wrapper .alien-top-right {
+  top: -20px;
+  right: -20px;
+}
+
+.hackathon-page-wrapper .alien-bottom-left {
+  bottom: -20px;
+  left: -20px;
+}
+
+.hackathon-page-wrapper .alien-bottom-right {
+  bottom: -20px;
+  right: -20px;
+}
+
+.hackathon-page-wrapper .retro-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hackathon-page-wrapper .pixel-icon-img {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.hackathon-page-wrapper .retro-title-box {
+  margin: 2rem 0;
+}
+
+.hackathon-page-wrapper .retro-title {
+  font-family: 'VT323', monospace;
+  font-size: 72px;
+  line-height: 64px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.hackathon-page-wrapper .retro-register-row {
+  margin-top: 2rem;
+}
+
+.hackathon-page-wrapper .retro-register-btn {
+  background: #fff;
+  color: #E60012;
+  border: 4px solid #000;
+  padding: 1rem 2rem;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.hackathon-page-wrapper .retro-register-btn:hover {
+  background: #f0f0f0;
+  color: #E60012;
+  text-decoration: none;
+}
+
+/* Reward ribbons section */
+.hackathon-page-wrapper .reward-tape-section {
+  margin: 2rem 0;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.hackathon-page-wrapper .ribbon-container {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hackathon-page-wrapper .ribbon-1 {
+  top: 30px;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 4;
+}
+
+.hackathon-page-wrapper .ribbon-2 {
+  top: 70px;
+  left: 0;
+  transform: rotate(3deg);
+  z-index: 3;
+}
+
+.hackathon-page-wrapper .ribbon-text {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  color: #E60012;
+  white-space: nowrap;
+  animation: scroll-ribbon 15s linear infinite;
+  font-weight: 400;
+}
+
+@keyframes scroll-ribbon {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Main description */
+.hackathon-page-wrapper .main-description {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  z-index: 3;
+  position: relative;
+}
+
+.hackathon-page-wrapper .main-description h2 {
+  font-size: 64px;
+  line-height: 64px;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  letter-spacing: -1.28px;
+}
+
+/* Prize pool highlight */
+.hackathon-page-wrapper .prize-pool-highlight {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+  z-index: 3;
+  position: relative;
+}
+
+.hackathon-page-wrapper .prize-box {
+  display: inline-block;
+  background: #E60012;
+  color: #fff;
+  border: 6px solid #fff;
+  padding: 1rem 2rem;
+  font-family: 'VT323', monospace;
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: 400;
+  letter-spacing: -2.4px;
+  position: relative;
+  outline: 4px solid #000;
+  outline-offset: -4px;
+}
+
+/* Corner squares */
+.hackathon-page-wrapper .corner-square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  z-index: 10;
+}
+
+.hackathon-page-wrapper .corner-top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.hackathon-page-wrapper .corner-top-right {
+  top: -10px;
+  right: -10px;
+}
+
+.hackathon-page-wrapper .corner-bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+
+.hackathon-page-wrapper .corner-bottom-right {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* Prize sections */
+.hackathon-page-wrapper .retro-prizes-section {
+  margin: 3rem 0;
+}
+
+.hackathon-page-wrapper .retro-prizes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hackathon-page-wrapper .prize-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hackathon-page-wrapper .prize-trophy {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -30px;
+  z-index: 10;
+  position: relative;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.hackathon-page-wrapper .retro-prize-card {
+  background: #fff;
+  border: 4px solid #000;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  min-width: 250px;
+  max-width: 300px;
+  outline: 4px solid #fff;
+  outline-offset: 4px;
+}
+
+.hackathon-page-wrapper .retro-prize-card h3 {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  line-height: 34px;
+  color: #000;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .retro-prize-card .prize-amount {
+  font-family: 'VT323', monospace;
+  font-size: 48px;
+  line-height: 46px;
+  color: #D50100;
+  margin: 0.75rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .retro-prize-card .prize-desc {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .retro-prize-card.special .special-awards {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.hackathon-page-wrapper .retro-prize-card.special .award-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25rem 0;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.hackathon-page-wrapper .retro-prize-card.special .award-label {
+  color: #000;
+  flex: 1;
+  font-size: 18px;
+}
+
+.hackathon-page-wrapper .retro-prize-card.special .award-amount {
+  color: #D50100;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  font-size: 18px;
+}
+
+/* Timeline section */
+.hackathon-page-wrapper .retro-timeline-section {
+  margin: 4rem 0;
+}
+
+.hackathon-page-wrapper .retro-section-title {
+  font-family: 'VT323', monospace;
+  font-size: 100px;
+  line-height: 64px;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hackathon-page-wrapper .timeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.hackathon-page-wrapper .retro-timeline-item {
+  background: #fff;
+  border: 4px solid #000;
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 180px;
+  max-width: 220px;
+  position: relative;
+}
+
+.hackathon-page-wrapper .retro-timeline-item .timeline-date {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  line-height: 22px;
+  color: #E60012;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hackathon-page-wrapper .timeline-status {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.hackathon-page-wrapper .timeline-desc {
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.hackathon-page-wrapper .timeline-runner {
+  width: 40px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .timeline-finish {
+  width: 60px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .timeline-line-top,
+.hackathon-page-wrapper .timeline-line-bottom {
+  height: 4px;
+  background: #fff;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+/* Participation section */
+.hackathon-page-wrapper .retro-participation-section {
+  margin: 4rem 0;
+}
+
+.hackathon-page-wrapper .participation-step {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem 60px;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.hackathon-page-wrapper .step-alien-icon {
+  width: 40px;
+  height: auto;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+.hackathon-page-wrapper .step-content {
+  flex: 1;
+}
+
+.hackathon-page-wrapper .step-content h3 {
+  color: #000 !important;
+  text-align: left;
+}
+
+.hackathon-page-wrapper .step-content p {
+  color: #000 !important;
+  text-align: left;
+}
+
+.hackathon-page-wrapper .step-details p {
+  color: #000 !important;
+  text-align: left;
+}
+
+.hackathon-page-wrapper .step-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hackathon-page-wrapper .discord-button-container {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.hackathon-page-wrapper .discord-button-container:hover {
+  transform: scale(1.05);
+}
+
+.hackathon-page-wrapper .discord-button-container .discord-btn-img {
+  height: 41px !important;
+  width: auto !important;
+  max-height: 43px !important;
+  max-width: none !important;
+}
+
+.hackathon-page-wrapper .retro-register-btn-image-small {
+  transition: transform 0.2s ease;
+}
+
+.hackathon-page-wrapper .retro-register-btn-image-small:hover {
+  transform: scale(1.05);
+}
+
+.hackathon-page-wrapper .register-btn-img-small {
+  height: 40px;
+  width: auto;
+}
+
+.hackathon-page-wrapper .step-icon {
+  font-family: 'VT323', monospace;
+  font-size: 32px;
+  color: #fff;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+.hackathon-page-wrapper .step-content h3 {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  line-height: 32px;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .step-content p {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  line-height: 26px;
+  color: #fff;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+.hackathon-page-wrapper .step-details p {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  line-height: 22px;
+  color: #fff;
+  margin: 0.25rem 0;
+  font-weight: 400;
+}
+
+/* Footer section */
+.hackathon-page-wrapper .retro-footer-cta {
+  margin: 3rem 0 0 0;
+  padding: 2.5rem 0 2rem 0;
+  background: #E60012;
+  border: none;
+  text-align: center;
+  position: relative;
+}
+
+.hackathon-page-wrapper .retro-register-cta-row {
+  margin-bottom: 2.5rem;
+}
+
+.hackathon-page-wrapper .retro-register-btn-large {
+  font-size: 2rem;
+  padding: 1.5rem 3.5rem;
+  border-width: 6px;
+  box-shadow: 0 0 0 8px #fff, 0 0 0 12px #000;
+}
+
+.hackathon-page-wrapper .retro-footer-message {
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hackathon-page-wrapper .retro-footer-follow {
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.hackathon-page-wrapper .retro-footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hackathon-page-wrapper .socials-img {
+  max-width: 200px;
+  height: auto;
+}
+
+.hackathon-page-wrapper .retro-footer-pixelart {
+  margin-top: 2rem;
+  display: block;
+  margin: 0;
+}
+
+.hackathon-page-wrapper .alien-pixelart {
+  width: 80px;
+  height: auto;
+}
+
+.alien-pixelart-floating {
+  position: absolute;
+  right: 5vw;
+  bottom: 80px;
+  width: 320px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .alien-pixelart-floating {
+    width: 180px;
+    right: 2vw;
+    bottom: 60px;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hackathon-page-wrapper .retro-title {
+    font-size: 48px;
+    line-height: 44px;
+  }
+  
+  .hackathon-page-wrapper .main-description h2 {
+    font-size: 36px;
+    line-height: 32px;
+  }
+  
+  .hackathon-page-wrapper .prize-box {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  
+  .hackathon-page-wrapper .retro-prizes-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hackathon-page-wrapper .timeline-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hackathon-page-wrapper .timeline-line-top,
+  .hackathon-page-wrapper .timeline-line-bottom {
+    display: none;
+  }
+}
+
+.alien-pixelart-hero-right {
+  position: absolute;
+  top: 50%;
+  right: 4vw;
+  transform: translateY(-50%);
+  width: 340px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .alien-pixelart-hero-right {
+    width: 200px;
+    right: 1vw;
+  }
+}
+@media (max-width: 800px) {
+  .alien-pixelart-hero-right {
+    display: none;
+  }
+}
+
+.hackathon-footer-logo-link {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.hackathon-footer-logo {
+  width: 70px;
+  height: auto;
+}
+
+.retro-footer-cta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0 0 2.5rem 0;
+}
+
+.retro-footer-message {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+.footer-message-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.alien-pixelart-bottom {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 80px;
+  height: auto;
+  max-width: 10vw;
+  z-index: 10;
+  pointer-events: none;
+  border: none;
+  filter: none;
+}
+
+@media (max-width: 900px) {
+  .alien-pixelart-bottom {
+    width: 90px;
+    max-width: 12vw;
+  }
+  .footer-message-row {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .retro-footer-cta-row {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+  .alien-pixelart-bottom {
+    display: none;
+  }
+}
+
+body {
+  border: 10px solid red !important;
+}
+
+img[src*="alien-dither 1.png"] {
+  width: 80px !important;
+  max-width: 10vw !important;
+  height: auto !important;
+  border: 3px solid lime !important;
+  filter: invert(1) !important;
+}

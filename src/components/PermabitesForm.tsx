@@ -80,61 +80,55 @@ export function PermabitesForm({ onPermabiteCreated }: PermabitesFormProps) {
     <div className="relative">
       <Card className="w-full max-w-2xl mx-auto bg-white/95 backdrop-blur-sm border border-amber-200 shadow-xl rounded-xl overflow-hidden transform hover:shadow-2xl transition-all duration-300">
         <CardHeader className="bg-gradient-to-r from-amber-500/40 to-amber-400/30 pb-4 border-b border-amber-200/50 relative">
-          <CardTitle className="text-gray-800 text-2xl md:text-3xl font-extrabold tracking-tight">Share Your Permabite</CardTitle>
+          <CardTitle className="force-white-text text-2xl md:text-3xl font-extrabold tracking-tight">Share Your Permabite</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <div className="flex flex-col gap-4">
             <div className="mb-4 input-row">
               <div className="input-field">
-                <label htmlFor="author" className="block text-sm font-medium text-gray-700">
-                  Alias
-                </label>
-                <Input
-                  id="author"
-                  value={formData.author}
-                  onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                  className="bg-white border border-gray-300 text-gray-800 rounded-md px-4 py-2 h-10 text-base focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all w-full shadow-input"
-                  placeholder="LTO"
-                />
+                <div className="permabite-input-bubble--small">
+                  <Input
+                    id="author"
+                    value={formData.author}
+                    onChange={(e) => setFormData({ ...formData, author: e.target.value })}
+                    className=""
+                    placeholder="Alias"
+                  />
+                </div>
               </div>
               <div className="flex gap-4 w-full">
                 <div className="input-field">
-                  <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-                    Country
-                  </label>
-                  <Input
-                    id="title"
-                    value={formData.title}
-                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="bg-white border border-gray-300 text-gray-800 rounded-md px-4 py-2 h-10 text-base focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all w-full shadow-input"
-                    placeholder="USA"
-                  />
+                  <div className="permabite-input-bubble--small">
+                    <Input
+                      id="title"
+                      value={formData.title}
+                      onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                      className=""
+                      placeholder="Country"
+                    />
+                  </div>
                 </div>
                 <div className="input-field">
-                  <label htmlFor="twitter" className="block text-sm font-medium text-gray-700">
-                    X Handle
-                  </label>
-                  <Input
-                    id="twitter"
-                    value={formData.twitter}
-                    onChange={(e) => setFormData({ ...formData, twitter: e.target.value })}
-                    className="bg-white border border-gray-300 text-gray-800 rounded-md px-4 py-2 h-10 text-base focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all w-full shadow-input"
-                    placeholder="@handleClick"
-                  />
+                  <div className="permabite-input-bubble--small">
+                    <Input
+                      id="twitter"
+                      value={formData.twitter}
+                      onChange={(e) => setFormData({ ...formData, twitter: e.target.value })}
+                      className=""
+                      placeholder="X Handle"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
             
             <div className="mt-6">
-              <div>
-                <label htmlFor="content" className="block text-xl font-semibold text-gray-800 mb-4 tracking-tight">
-                  Share About Your Permabites Event
-                </label>
+              <div className="permabite-input-bubble">
                 <Textarea
                   id="content"
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                  className="min-h-[120px] bg-white border border-gray-300 text-gray-800 rounded-md px-4 py-2 text-base focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-all w-full shadow-input"
+                  className=""
                   placeholder="Share about your Permabites event..."
                 />
               </div>

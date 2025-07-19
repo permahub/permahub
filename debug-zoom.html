@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Debug Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .zoom-test {
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .zoom-1 { zoom: 1; }
+        .zoom-2 { zoom: 2; }
+        .zoom-0-5 { zoom: 0.5; }
+        
+        .scale-1 { transform: scale(1); }
+        .scale-2 { transform: scale(2); }
+        .scale-0-5 { transform: scale(0.5); }
+        
+        .normal { /* no special properties */ }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Zoom Debug Test</h1>
+        
+        <div class="zoom-test normal">
+            <h3>Normal (no zoom/scale)</h3>
+            <p>This is normal text with no zoom or scale applied.</p>
+        </div>
+        
+        <div class="zoom-test zoom-1">
+            <h3>zoom: 1</h3>
+            <p>This text has zoom: 1 applied (should be normal).</p>
+        </div>
+        
+        <div class="zoom-test zoom-2">
+            <h3>zoom: 2</h3>
+            <p>This text has zoom: 2 applied (should be 2x larger).</p>
+        </div>
+        
+        <div class="zoom-test zoom-0-5">
+            <h3>zoom: 0.5</h3>
+            <p>This text has zoom: 0.5 applied (should be 0.5x smaller).</p>
+        </div>
+        
+        <div class="zoom-test scale-1">
+            <h3>transform: scale(1)</h3>
+            <p>This text has transform: scale(1) applied (should be normal).</p>
+        </div>
+        
+        <div class="zoom-test scale-2">
+            <h3>transform: scale(2)</h3>
+            <p>This text has transform: scale(2) applied (should be 2x larger).</p>
+        </div>
+        
+        <div class="zoom-test scale-0-5">
+            <h3>transform: scale(0.5)</h3>
+            <p>This text has transform: scale(0.5) applied (should be 0.5x smaller).</p>
+        </div>
+    </div>
+</body>
+</html>

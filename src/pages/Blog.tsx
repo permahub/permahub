@@ -28,12 +28,6 @@ const Blog = () => {
         muted
         playsInline
       />
-      
-      {/* Background Image in Top-Right Corner */}
-      <div className="corner-image3"></div>
-      <div className="corner-image4"></div>
-      <div className="corner-image5"></div>
-      <div className="corner-image6"></div>
 
       {/* Blog Content */}
       <div className="no-scroll-wrapper">
