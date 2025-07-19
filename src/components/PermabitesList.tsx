@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { message, results, createSigner } from '@permaweb/aoconnect';
 import { useNavigate } from 'react-router-dom';
+import { WalletManager, useWalletState } from './WalletManager';
 import './Permabites.css';
 import * as React from 'react';
 
@@ -17,12 +18,26 @@ const PERMABITES_PROCESS_ID = 'GMMejKCd-NNESBauFsf4RXBniYb5Yzwa_1WTrshiJZc';
 
 export function PermabitesList() {
   const [permabites, setPermabites] = React.useState<Permabite[]>([]);
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const navigate = useNavigate();
+  const { isConnected } = useWalletState();
 
   React.useEffect(() => {
+    if (isConnected) {
+      fetchPermabites();
+    } else {
+      setPermabites([]);
+    }
+  }, [isConnected]);
+
     const fetchPermabites = async () => {
+    if (!window.arweaveWallet) {
+      setPermabites([]);
+      setLoading(false);
+      return;
+    }
+
       try {
         setLoading(true);
         // Create a signer using the Arweave wallet
@@ -100,16 +115,37 @@ export function PermabitesList() {
 
         console.log('Final permabites:', uniquePermabites);
         setPermabites(uniquePermabites);
+      setError(null);
       } catch (err) {
         console.error('Error fetching permabites:', err);
-        setError('Failed to load permabites');
+      setError(err instanceof Error ? err.message : 'Failed to fetch permabites');
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPermabites();
-  }, []);
+  if (!isConnected) {
+    return (
+      <div className="p-6 bg-white rounded-xl border border-amber-200 shadow-lg max-w-xl mx-auto my-8">
+        <h3 className="text-xl font-semibold force-white-text mb-3">Connect Wallet to View Permabites</h3>
+        <p className="force-white-text mb-4">
+          Please connect your wallet to view and interact with permabites.
+        </p>
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2">
+            <WalletManager />
+            <button
+              onClick={() => window.location.reload()}
+              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md border border-gray-300 transition"
+            >
+              Refresh
+            </button>
+          </div>
+          <span className="text-xs force-white-text mt-1">If your permabites do not show after connecting, try refreshing the page.</span>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (

@@ -15,13 +15,14 @@ export default function Bites() {
   return (
     <>
       <Helmet>
-        <title>Permabites | PermaHub</title>
+        <title>Permabites</title>
         <meta name="description" content="Get a taste of the permaweb — pizza, prints, and early access. Apply to host a Permabite!" />
-        <meta property="og:title" content="PermaBitesss" />
+        <meta property="og:title" content="PermaBites" />
         <meta property="og:description" content="Get a taste of the permaweb — pizza, prints, and early access. Apply to host a Permabite!" />
-        <meta property="og:image" content="https://permahub.vercel.app/permabites.png" />
-        <meta property="og:url" content="https://permahub.vercel.app/bites" />
+        <meta property="og:image" content="https://arweave.net/zZl-e1njFrbyTaIj_omIFV9Qp8-jxMtqdBs4CGsl44k" />
+        <meta property="og:url" content="https://permahub.ar.io/bites" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://arweave.net/zZl-e1njFrbyTaIj_omIFV9Qp8-jxMtqdBs4CGsl44k" />
       </Helmet>
       <div className="bites-background flex flex-col items-center justify-center p-4">
         <div className="bites-content w-full flex flex-col items-center">

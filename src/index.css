@@ -27,7 +27,6 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* so if content is short, it still fills the screen */
-  
 }
 
 .mainnet-title {
@@ -98,4 +97,341 @@ h2 {
 /* Force black text utility */
 .force-black-text {
   color: #111 !important;
+}
+
+.force-white-text {
+  color: #fff !important;
+}
+
+.berlin-tile-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.berlin-main-img {
+  max-width: 120px;
+  max-height: 120px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.berlin-tiles-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 15px;
+  margin-top: 32px;
+  margin-bottom: 0;
+  overflow-x: auto;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.berlin-tiles-row > .berlin-tile-card:first-child {
+  margin-left: 0;
+}
+.berlin-tiles-row > .berlin-tile-card:last-child {
+  margin-right: 0;
+}
+
+.berlin-tile-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1.5px solid #e5e7eb;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 16px 0;
+  transition: box-shadow 0.2s;
+  height: 320px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.berlin-tile-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  border-color: #a5b4fc;
+}
+
+.berlin-tile-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #222;
+  text-align: center;
+}
+
+.berlin-tile-question {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .berlin-tiles-row {
+    gap: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .berlin-tiles-row > .berlin-tile-card:first-child {
+    margin-left: 0;
+  }
+  .berlin-tiles-row > .berlin-tile-card:last-child {
+    margin-right: 0;
+  }
+  .berlin-tile-card {
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 220px;
+    height: 220px;
+    padding: 0 0 12px 0;
+  }
+  .berlin-tile-img {
+    height: 60%;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .berlin-tiles-row {
+    gap: 12px;
+    padding-bottom: 12px;
+    margin-top: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .berlin-tiles-row > .berlin-tile-card:first-child {
+    margin-left: 0;
+  }
+  .berlin-tiles-row > .berlin-tile-card:last-child {
+    margin-right: 0;
+  }
+  .berlin-tile-card {
+    min-width: 90%;
+    max-width: 340px;
+    min-height: 180px;
+    height: 180px;
+    padding: 0 0 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .berlin-tile-img {
+    height: 80%;
+    min-height: 80px;
+  }
+}
+
+.berlin-banner-img {
+  width: 100%;
+  max-width: 100%;
+  height: clamp(180px, 36vw, 360px);
+  min-height: 180px;
+  max-height: 290px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: height 0.3s, max-height 0.3s;
+}
+
+/* Dark mode overrides for Berlin campaign tiles */
+.dark-mode .berlin-tile-card {
+  background: #18181b;
+  border-color: #333;
+}
+.dark-mode .berlin-tile-label {
+  color: #fff;
+}
+.dark-mode .berlin-tile-question {
+  color: #bbb;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', Arial, sans-serif !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', Arial, sans-serif !important;
+}
+
+.berlin-campaign-page h1 {
+  margin-bottom: 0.25rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.berlin-campaign-page .font-bebas {
+  margin-bottom: 0.5rem !important;
+}
+
+.berlin-campaign-page .berlin-tiles-row {
+  margin-top: 0 !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.berlin-campaign-page .text-center.text-base.font-grotesk.font-bold.mt-8.mb-2 {
+  margin-top: 13.7rem !important;
+}
+
+@media (max-width: 1170px) {
+  .berlin-banner-img {
+    height: clamp(120px, 28vw, 240px);
+    max-height: 240px;
+  }
+}
+
+/* Glowing Effect Demo Styles */
+.grid-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-2px);
+}
+
+.glowing-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid #fff !important;
+  box-shadow: 0 0 24px 4px #fff8, 0 0 0 2px #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.grid-item .content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--background);
+  padding: 1.5rem;
+}
+
+.grid-item .icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.grid-item .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 1rem;
+}
+
+.grid-item .description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.5rem;
+}
+
+/* Dark mode adjustments */
+.dark-mode .grid-item .glowing-border {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+/* DEBUG: Force .glow to be visible for troubleshooting */
+.glow {
+  background: repeating-conic-gradient(from 0deg, #ff0 0deg 10deg, #000 10deg 20deg) !important;
+  opacity: 0.5 !important;
+}
+
+.glow-title {
+  color: var(--foreground, #222) !important;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  letter-spacing: -0.04em;
+}
+.glow-description {
+  color: var(--muted-foreground, #666) !important;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+.dark-mode .glow-title {
+  color: #fff !important;
+}
+.dark-mode .glow-description {
+  color: #bbb !important;
+}
+
+.glow-demo-isolated {
+  all: revert;
+  box-sizing: border-box;
+  font-family: inherit;
+  width: 100%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+}
+
+.glow-demo-isolated ul {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .glow-demo-isolated ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  .glow-demo-isolated ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1536px) {
+  .glow-demo-isolated ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

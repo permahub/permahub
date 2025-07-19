@@ -55,9 +55,9 @@ export default function Permacast() {
   }, []);
 
   return (
-    <div className="permacast-page">
-      <div className="permacast-header">
-        <h1 className="mainnet-title">Permacast Series</h1>
+    <div className="cast-page">
+      <div className="cast-header">
+        <h1 className="mainnet-title">PERMACAST Series</h1>
         <p>Explore our collection of permaweb-native audio content</p>
       </div>
       <div className="series-grid">
@@ -101,7 +101,7 @@ export default function Permacast() {
         })}
       </div>
       <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '1.1rem' }}>
-        For more podcasts, visit the official Permacast page at <a href="https://permacast.app" target="_blank" rel="noopener noreferrer" style={{ color: '#0066cc', textDecoration: 'underline' }}>https://permacast.app</a>
+        For more podcasts, visit the official PERMACAST page at <a href="https://permacast.app" target="_blank" rel="noopener noreferrer" style={{ color: '#0066cc', textDecoration: 'underline' }}>https://permacast.app</a>
       </div>
     </div>
   );

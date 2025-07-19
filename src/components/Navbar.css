@@ -158,7 +158,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(0,0,0,0.3);
   z-index: 1099;
@@ -259,7 +259,9 @@
 /* Wallet Connect Button Styles */
 .wallet-connect-button {
   transform: scale(0.85);
-  margin-right: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wallet-connect-button :global(.arweave-wallet-kit-connect-button) {
@@ -267,4 +269,8 @@
   font-size: 14px;
   height: 32px;
   min-width: 120px;
+}
+
+.dark-mode .hamburger-bar {
+  background: #fff !important;
 }

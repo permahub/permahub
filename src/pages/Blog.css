@@ -83,54 +83,6 @@
   margin-top: 20px; /* Reduced from 40px */
 }
 
-/* Background corner images */
-.corner-image3,
-.corner-image4,
-.corner-image5,
-.corner-image6 {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.1;
-  z-index: 5; /* Ensure corner images are above the video but below content */
-}
-
-.corner-image3 {
-  top: 0;
-  right: 0;
-  background-image: url('/corner3.png');
-}
-
-.corner-image4 {
-  bottom: 0;
-  left: 0;
-  background-image: url('/corner4.png');
-}
-
-.corner-image5 {
-  top: 50%;
-  right: 0;
-  background-image: url('/corner5.png');
-}
-
-.corner-image6 {
-  bottom: 50%;
-  left: 0;
-  background-image: url('/corner6.png');
-}
-
-/* Hide corner images on smaller screens */
-@media (max-width: 886px) {
-  .corner-image3,
-  .corner-image4,
-  .corner-image5,
-  .corner-image6 {
-    display: none;
-  }
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .mainnet-title {
@@ -149,7 +101,7 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   /* Optional: add a dark overlay for better button contrast */
 }

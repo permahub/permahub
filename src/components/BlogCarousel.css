@@ -359,7 +359,7 @@
 
 @media (max-width: 900px) {
   .featured-blog-preview {
-    width: 95vw;
+    width: 95%;
     max-width: 100%;
     flex-direction: column;
     padding: 20px;

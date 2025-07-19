@@ -76,7 +76,7 @@ export default function GridMotionDemo() {
   }
 
   return (
-    <div className="min-h-screen bg-black/95 relative">
+    <div className="h-full bg-black/95 relative">
       {/* Video Background - Moved to the back with lower z-index */}
       <div className="video-background-container absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: -1 }}>
         {/* <video 
@@ -92,7 +92,7 @@ export default function GridMotionDemo() {
       </div>
       
       {/* Grid Container - Now on top with higher z-index */}
-      <div className="h-screen w-full relative" style={{ zIndex: 1 }}>
+      <div className="h-full w-full relative" style={{ zIndex: 1 }}>
         <GridMotion 
           items={backgroundImages}
           gradientColor="rgba(255,255,255,0.02)"

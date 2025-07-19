@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { message, results, createSigner } from '@permaweb/aoconnect';
 import { Helmet } from 'react-helmet-async';
+import { WalletManager } from '../components/WalletManager';
 import './Bites.css';
 import * as React from 'react';
 
@@ -20,13 +21,41 @@ export default function PermabiteDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [permabite, setPermabite] = React.useState<Permabite | null>(null);
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [isWalletConnected, setIsWalletConnected] = React.useState(false);
 
   React.useEffect(() => {
+    const checkWalletConnection = () => {
+      const connected = !!window.arweaveWallet;
+      setIsWalletConnected(connected);
+      if (connected) {
+        fetchPermabite();
+      }
+    };
+
+    // Check initial connection
+    checkWalletConnection();
+
+    // Listen for wallet connection changes
+    window.addEventListener('arweaveWalletLoaded', checkWalletConnection);
+    window.addEventListener('arweaveWalletDisconnected', () => {
+      setIsWalletConnected(false);
+      setPermabite(null);
+    });
+
+    return () => {
+      window.removeEventListener('arweaveWalletLoaded', checkWalletConnection);
+      window.removeEventListener('arweaveWalletDisconnected', () => {
+        setIsWalletConnected(false);
+        setPermabite(null);
+      });
+    };
+  }, [id]);
+
     const fetchPermabite = async () => {
-      if (!id) {
-        setError("Permabite ID not provided");
+    if (!id || !window.arweaveWallet) {
+      setError("Permabite ID not provided or wallet not connected");
         setLoading(false);
         return;
       }
@@ -103,23 +132,37 @@ export default function PermabiteDetail() {
         
         if (foundPermabite) {
           setPermabite(foundPermabite);
+        setError(null);
         } else {
           setError("Permabite not found");
         }
       } catch (err) {
         console.error('Error fetching permabite:', err);
-        setError('Failed to load permabite details');
+      setError(err instanceof Error ? err.message : 'Failed to fetch permabite');
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPermabite();
-  }, [id]);
-
   const goBack = () => {
-    navigate(-1);
+    navigate('/bites');
   };
+
+  if (!isWalletConnected) {
+    return (
+      <div className="bites-background min-h-screen flex flex-col items-center justify-center p-4">
+        <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Connect Wallet to View Permabite</h3>
+          <p className="text-gray-600 mb-4">
+            Please connect your wallet to view and interact with this permabite.
+          </p>
+          <div className="flex justify-center">
+            <WalletManager />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (

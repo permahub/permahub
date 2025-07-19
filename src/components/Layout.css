@@ -64,6 +64,16 @@
   transition: background-color 0.3s ease;
 }
 
+/* Proper container class for content width constraints */
+.container {
+  width: 100%;
+  /* max-width: 100%; */
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Footer – fixed at the bottom */
 .layout-footer {
   position: fixed;

@@ -90,7 +90,7 @@ p {
 }
 
 .more-container {
-    width: 100vw; /* Ensures full width */
+    width: 100%; /* Ensures full width */
     max-width: 100%; /* Prevents unwanted constraints */
     overflow-x: hidden; /* Prevents horizontal scrolling issues */
 }
@@ -221,7 +221,7 @@ p {
   text-align: center;
   padding-bottom: 50px;
   overflow-y: auto;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }

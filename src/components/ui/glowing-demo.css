@@ -1,0 +1,56 @@
+.glowing-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff8800, #ff5500);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.content {
+  border-radius: 1.25rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dark .content {
+  background: #1a1a1a;
+}
+
+.dark .glowing-border {
+  background: linear-gradient(45deg, #000000, #fff);
+  opacity: 0.8;
+}
+
+/* Campaign badge styling */
+.campaign-badge {
+  background: linear-gradient(45deg, #dd7bbb, #7b7bdd);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Date styling */
+.date-text {
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.dark .date-text {
+  color: #999;
+} 

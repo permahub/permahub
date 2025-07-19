@@ -110,7 +110,7 @@ export default function PermacastSeries() {
 
   if (isLoading) {
     return (
-      <div className="permacast-page">
+      <div className="cast-page">
         <div className="loading-state">
           <h2>Loading episodes...</h2>
         </div>
@@ -120,7 +120,7 @@ export default function PermacastSeries() {
 
   if (error) {
     return (
-      <div className="permacast-page">
+      <div className="cast-page">
         <div className="error-state">
           <h2>Unable to load episodes</h2>
           <p>{error}</p>
@@ -132,7 +132,7 @@ export default function PermacastSeries() {
 
   if (!seriesInfo) {
     return (
-      <div className="permacast-page">
+      <div className="cast-page">
         <div className="error-state">
           <h2>Series not found</h2>
           <p>The requested series could not be found.</p>
@@ -143,7 +143,7 @@ export default function PermacastSeries() {
   }
 
   return (
-    <div className="permacast-page">
+    <div className="cast-page">
       <div className="series-header">
         <button onClick={() => navigate('/permacast')} className="back-button">
           ← Back to Series
@@ -198,7 +198,7 @@ export default function PermacastSeries() {
                 showFilledVolume={true}
               />
               <p className="episode-description">
-                {/^Episode stored on Permacast with ID/.test(ep.description)
+                {/^Episode stored on CAST with ID/.test(ep.description)
                   ? (() => {
                       const parts = ep.link.split('/');
                       const guid = parts[parts.length - 1];
@@ -207,7 +207,7 @@ export default function PermacastSeries() {
                   : ep.description}
               </p>
               <a href={ep.link} target="_blank" rel="noopener noreferrer" className="episode-link">
-                View on Permacast
+                View on CAST
               </a>
             </div>
           ))

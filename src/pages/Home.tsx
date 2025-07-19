@@ -27,7 +27,7 @@ const Home = () => {
 
   const handleEnterHub = () => {
     enterHub();
-    navigate('/bites');
+    navigate('/hackathon');
   };
 
   return (
@@ -41,16 +41,10 @@ const Home = () => {
           loop 
           playsInline
         >
-          <source src="/permahub.mp4" type="video/mp4" />
+          <source src="./permahub.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-
-      {/* Background Image in Top-Right Corner */}
-      <div className="corner-image3"></div>
-      <div className="corner-image4"></div>
-      <div className="corner-image5"></div>
-      <div className="corner-image6"></div>
 
       {/* Hero Section */}
       <div className="hero-section flex flex-col items-center justify-center">
