@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && permaweb-deploy --deploy-folder ./dist --arns-name permahub --ant-process XAuRBfoIdLzxlGo1BJMJZ6qOVilJAbe5zju8V0RtG6c"
+    "deploy": "rm -rf ./dist && npm run build && permaweb-deploy --deploy-folder ./dist --arns-name permahub --ant-process XAuRBfoIdLzxlGo1BJMJZ6qOVilJAbe5zju8V0RtG6c"
   },
   "dependencies": {
     "@arweave-wallet-kit/arconnect-strategy": "^0.1.1",
