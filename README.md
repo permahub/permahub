@@ -1,4 +1,4 @@
-# PermaHub on Arweave
+# PermaHub on Arweave v.0.0.1
 
 PermaHub is a decentralized platform for building, playing, and learning on Arweave. This React + TypeScript application serves as a hub for various permaweb activities including gaming, blogging, and community engagement.
 
