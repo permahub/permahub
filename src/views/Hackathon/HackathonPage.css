@@ -1268,7 +1268,7 @@
 }
 
 /* Responsive navigation for mobile */
-@media (max-width: 1104px) {
+@media (max-width: 1210px) {
   .nav-links-center {
     display: none !important;
   }
@@ -1305,6 +1305,16 @@
     display: none !important;
   }
   .timeline-runner {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1211px) {
+  .retro-mobile-menu,
+  .retro-mobile-menu-overlay {
+    display: none !important;
+  }
+  .retro-hamburger-menu {
     display: none !important;
   }
 }
@@ -1435,66 +1445,6 @@
   .retro-hamburger-menu {
     display: flex;
     margin-left: auto;
-  }
-}
-
-@media (min-width: 1104px) {
-  .retro-mobile-menu,
-  .retro-mobile-menu-overlay {
-    display: none !important;
-  }
-  
-  .retro-hamburger-menu {
-    display: none !important;
-  }
-}
-
-@media (max-width: 580px) {
-  .hackathon-page-wrapper .retro-nav {
-    padding: 0.5rem;
-  }
-  
-  .hackathon-page-wrapper .ao-logo {
-    margin-right: 15px;
-  }
-  
-  .hackathon-page-wrapper .retro-nav-item {
-    font-size: 12px;
-  }
-}
-
-.hackathon-footer-logo-link {
-  display: inline-block;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  align-self: flex-start;
-}
-
-.hackathon-footer-logo {
-  width: 103px;
-  height: auto;
-  vertical-align: middle;
-  margin: 26px 0px 0px 60px;
-}
-
-.x-btn-img,
-.discord-btn-img {
-  margin: 0 !important;
-}
-
-@media (max-width: 1500px) {
-  .hackathon-page-wrapper .hackathon-container {
-    max-width: 100vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .hackathon-page-wrapper .hackathon-container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 }
 
