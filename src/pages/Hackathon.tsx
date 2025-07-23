@@ -11,6 +11,7 @@ const navLinks = [
   { to: '/cast', label: 'Cast' },
   { to: '/hackathon', label: 'Hackathon' },
   { to: '/berlin', label: 'Berlin' },
+  { href: 'https://docs_permahub.ar.io', label: 'Docs', external: true },
 ];
 
 export default function Hackathon() {
@@ -28,7 +29,11 @@ export default function Hackathon() {
         
         <div className="nav-links-center">
          {navLinks.map(link => (
-           <Link key={link.to} to={link.to} className={`retro-nav-item${location.pathname === link.to ? ' active' : ''}`}>{link.label}</Link>
+           link.external ? (
+             <a key={link.label} href={link.href} className={`retro-nav-item`} target="_blank" rel="noopener noreferrer">{link.label}</a>
+           ) : link.to ? (
+             <Link key={link.to} to={link.to} className={`retro-nav-item${location.pathname === link.to ? ' active' : ''}`}>{link.label}</Link>
+           ) : null
          ))}
         </div>
         
@@ -55,11 +60,17 @@ export default function Hackathon() {
         <button className="retro-close-mobile-menu" onClick={handleCloseMenu}>&times;</button>
         <ul className="retro-mobile-navbar-links">
           {navLinks.map(link => (
-            <li key={link.to}>
-              <Link to={link.to} className="retro-navbar-link" onClick={handleMenuLinkClick}>
-                {link.label}
-              </Link>
-            </li>
+            link.external ? (
+              <li key={link.label}>
+                <a href={link.href} className="retro-navbar-link" target="_blank" rel="noopener noreferrer" onClick={handleMenuLinkClick}>{link.label}</a>
+              </li>
+            ) : link.to ? (
+              <li key={link.to}>
+                <Link to={link.to} className="retro-navbar-link" onClick={handleMenuLinkClick}>
+                  {link.label}
+                </Link>
+              </li>
+            ) : null
           ))}
         </ul>
       </div>

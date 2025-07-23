@@ -34,6 +34,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
           <li><Link to="/permacast" className="navbar-link">CAST</Link></li>
           <li><Link to="/hackathon" className="navbar-link">HACKATHON</Link></li>
           <li><Link to="/berlin" className="navbar-link">BERLIN</Link></li>
+          <li><a href="https://docs_permahub.ar.io" className="navbar-link" target="_blank" rel="noopener noreferrer">DOCS</a></li>
         </ul>
       </div>
 
@@ -68,6 +69,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
           <li><Link to="/permacast" className="navbar-link" onClick={() => setMenuOpen(false)}>CAST</Link></li>
           <li><Link to="/hackathon" className="navbar-link" onClick={() => setMenuOpen(false)}>HACKATHON</Link></li>
           <li><Link to="/berlin" className="navbar-link" onClick={() => setMenuOpen(false)}>BERLIN</Link></li>
+          <li><a href="https://docs_permahub.ar.io" className="navbar-link" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>DOCS</a></li>
         </ul>
       </div>
     </nav>
