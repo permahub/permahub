@@ -76,7 +76,7 @@ export default function Hackathon() {
       </div>
       <Helmet>
         <title>Agents of the Permaweb Hackathon | PermaHub</title>
-        <meta name="description" content="Build Autonomous AI Agents That Live Forever | $39,000 in Prizes | August 11 - September 2, 2025" />
+        <meta name="description" content="Build Autonomous AI Agents That Live Forever | $43,600 in Prizes | August 11 - September 2, 2025" />
       </Helmet>
 
       <div className="hackathon-container">
@@ -160,7 +160,7 @@ export default function Hackathon() {
             <div className="corner-square corner-top-right"></div>
             <div className="corner-square corner-bottom-left"></div>
             <div className="corner-square corner-bottom-right"></div>
-            $39,000
+            $43,600
           </div>
         </div>
 
@@ -176,6 +176,7 @@ export default function Hackathon() {
                 <div className="corner-square corner-bottom-right"></div>
                 <h3>Grand Prize</h3>
                 <div className="prize-amount">$25,000</div>
+                <div className="prize-amount-note">in $AR tokens</div>
                 <div className="prize-desc grand-prize-desc">The most<br />innovative and<br />impactful agent</div>
               </div>
             </div>
@@ -188,7 +189,7 @@ export default function Hackathon() {
                 <div className="corner-square corner-bottom-right"></div>
                 <h3>Track Winner</h3>
                 <div className="prize-amount">$2,500</div>
-                <div className="prize-amount-note">(each)</div>
+                <div className="prize-amount-note">(each) in $AR tokens</div>
                 <div className="prize-desc track-winner-desc">• Practical Utility Agents<br />• Multi-Agent Systems<br />• AI-Enhanced Applications<br />• Agent Infrastructure</div>
               </div>
             </div>
@@ -203,16 +204,58 @@ export default function Hackathon() {
                 <div className="special-awards">
                   <div className="award-item">
                     <span className="award-label">• Community Choice Award:</span>
-                    <span className="award-amount">$1,500</span>
+                    <span className="award-amount">$1,500 in $AR</span>
                   </div>
                   <div className="award-item">
                     <span className="award-label">• Best Documentation:</span>
-                    <span className="award-amount">$1,250</span>
+                    <span className="award-amount">$1,250 in $AR</span>
                   </div>
                   <div className="award-item">
                     <span className="award-label">• Most Practical Use Case:</span>
-                    <span className="award-amount">$1,250</span>
+                    <span className="award-amount">$1,250 in $AR</span>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="prize-card-container">
+              <div className="prize-trophy trophy-astro bonus-plus">+</div>
+              <div className="retro-prize-card astro">
+                <div className="corner-square corner-top-left"></div>
+                <div className="corner-square corner-top-right"></div>
+                <div className="corner-square corner-bottom-left"></div>
+                <div className="corner-square corner-bottom-right"></div>
+                <h3>AstroUSD<br />Bonuses</h3>
+                <div className="astro-bonus">
+                  <div className="bonus-amount">$500 USDA</div>
+                  <div className="bonus-desc">per track for best<br />USDA integration</div>
+                </div>
+              </div>
+            </div>
+            <div className="prize-card-container">
+              <div className="prize-trophy trophy-apus bonus-plus">+</div>
+              <div className="retro-prize-card apus">
+                <div className="corner-square corner-top-left"></div>
+                <div className="corner-square corner-top-right"></div>
+                <div className="corner-square corner-bottom-left"></div>
+                <div className="corner-square corner-bottom-right"></div>
+                <h3>Apus Network<br />Bonuses</h3>
+                <div className="apus-bonus">
+                  <div className="bonus-amount">APUS Tokens</div>
+                  <div className="bonus-desc">Grand Prize: +$1,000<br />Track winners: +$200 each<br />Special awards: +$100 each</div>
+                </div>
+              </div>
+            </div>
+            <div className="prize-card-container">
+              <div className="prize-trophy trophy-randao bonus-plus">+</div>
+              <div className="retro-prize-card randao">
+                <div className="corner-square corner-top-left"></div>
+                <div className="corner-square corner-top-right"></div>
+                <div className="corner-square corner-bottom-left"></div>
+                <div className="corner-square corner-bottom-right"></div>
+                <h3>RandAO<br />Bonus</h3>
+                <div className="randao-bonus">
+                  <div className="bonus-amount">$500 RandAO</div>
+                  <div className="bonus-desc">for best use of<br />randomness<br />(one bonus across all tracks)</div>
                 </div>
               </div>
             </div>
@@ -264,9 +307,9 @@ export default function Hackathon() {
                 <div className="timeline-desc">AI Integration</div>
               </div>
               <div className="retro-timeline-item">
-                <div className="timeline-date">September 3</div>
+                <div className="timeline-date">September 2</div>
                 <div className="timeline-status">Submission<br />Deadline</div>
-                <div className="timeline-desc">Building Done</div>
+                <div className="timeline-desc">11:59 PM UTC</div>
               </div>
               <div className="retro-timeline-item">
                 <div className="timeline-date">September 5</div>
@@ -305,7 +348,7 @@ export default function Hackathon() {
             <div className="step-content">
               <h3>Step 2 - Build your agent</h3>
               <div className="step-details">
-                <p>- Use AO with HTTP message passing</p>
+                <p>- Built on AO protocol using message-passing</p>
                 <p>- Runs 72+ hours autonomously</p>
                 <p>- Saves data to Arweave</p>
                 <p>- Solves real-world problems</p>

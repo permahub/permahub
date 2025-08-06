@@ -31,7 +31,7 @@ export default function HackathonMetrics() {
       <div className="metrics-grid">
         <div className="metric-card">
           <h3 className="prize-pool-title">Prize Pool</h3>
-          <div className="metric-value">$39,000</div>
+          <div className="metric-value">$43,600</div>
           <div className="metric-label">Total Prizes</div>
         </div>
         <div className="metric-card">
