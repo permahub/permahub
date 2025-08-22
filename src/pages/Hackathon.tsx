@@ -116,7 +116,7 @@ export default function Hackathon() {
             <img src="Frame_260.png" alt="Register Now" className="register-btn-img" />
             </a>
           <Link 
-            to="/#/codeofconduct" 
+            to="/codeofconduct" 
             className="retro-register-btn-image"
           >
             <img src="cofcbtn.png" alt="Code of Conduct" className="register-btn-img" />
