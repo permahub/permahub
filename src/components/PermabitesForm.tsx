@@ -80,7 +80,7 @@ export function PermabitesForm({ onPermabiteCreated }: PermabitesFormProps) {
     <div className="relative">
       <Card className="w-full max-w-2xl mx-auto bg-white/95 backdrop-blur-sm border border-amber-200 shadow-xl rounded-xl overflow-hidden transform hover:shadow-2xl transition-all duration-300">
         <CardHeader className="bg-gradient-to-r from-amber-500/40 to-amber-400/30 pb-4 border-b border-amber-200/50 relative">
-          <CardTitle className="force-white-text text-2xl md:text-3xl font-extrabold tracking-tight">Share Your Permabite</CardTitle>
+          <CardTitle className="force-white-text text-2xl md:text-2xl font-extrabold tracking-tight">Share About Your Permabites Experience</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <div className="flex flex-col gap-4">
