@@ -82,7 +82,7 @@ export function Permabites() {
       {/* New Permabite Form */}
       <Card className="mb-12 border-2 border-primary/20 shadow-lg">
         <CardHeader className="bg-gradient-to-r from-primary/10 to-secondary/10">
-          <CardTitle className="text-2xl font-bold text-center">Share About Your Permabite Experience</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">Share Your Permabite</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <div className="space-y-6">
